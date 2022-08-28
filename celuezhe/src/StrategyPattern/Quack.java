@@ -1,3 +1,5 @@
+package StrategyPattern;
+
 /**
  * 呱呱叫具体的行为类
  */

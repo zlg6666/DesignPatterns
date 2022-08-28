@@ -1,4 +1,9 @@
-public class ModelDuck extends Duck{
+package StrategyPattern;
+
+import StrategyPattern.Duck;
+import StrategyPattern.FlyNoWay;
+
+public class ModelDuck extends Duck {
     public ModelDuck() {
         flyBehavior = new FlyNoWay();
         quackBehavior = new Quack();
