@@ -1,18 +1,21 @@
-package IteratorsAndCommbinationPatterns.Iterator;
+package IteratorsAndCommbinationPatterns.JavaUtilIterator;
 
-import java.util.ArrayList;
+import IteratorsAndCommbinationPatterns.Iterator.DinerMenuIterator;
+import IteratorsAndCommbinationPatterns.Iterator.MenuItem;
+
+import java.util.Iterator;
 
 /**
  * @author: zlg
  * @date: 2022/9/23
  */
-public class DineMenu {
+public class JavaDineMenu implements Menu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
     MenuItem[] menuItems;
 
 
-    public DineMenu() {
+    public JavaDineMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
         addItem("Vegetarian BLT", "(Fakin') Bacon tomato", true, 2.99);
         addItem("BLT", "Bacon with lettuce", false, 1.99);
@@ -34,7 +37,8 @@ public class DineMenu {
         return menuItems;
     }
 
+    @Override
     public Iterator createIterator() {
-        return new DinerMenuIterator(menuItems);
+        return new JavaDinerMenuIterator(menuItems);
     }
 }

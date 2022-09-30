@@ -1,15 +1,18 @@
-package IteratorsAndCommbinationPatterns.Iterator;
+package IteratorsAndCommbinationPatterns.JavaUtilIterator;
+
+import IteratorsAndCommbinationPatterns.Iterator.MenuItem;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * @author: zlg
  * @date: 2022/9/23
  */
-public class PancakeHouseMenu {
+public class JavaPancakeHouseMenu implements Menu{
     ArrayList menuItems;
 
-    public PancakeHouseMenu() {
+    public JavaPancakeHouseMenu() {
         menuItems = new ArrayList();
         addItem("K&B Pancakes Breakfast", "Pancakes with scrambled eggs", true, 2.99);
         addItem("Regular Pancakes Breakfast", "Pancakes with fried eggs", true, 1.99);
@@ -26,7 +29,8 @@ public class PancakeHouseMenu {
         return menuItems;
     }
 
+    @Override
     public Iterator createIterator() {
-        return new PancakeHouseMenuIterator(menuItems);
+        return  menuItems.iterator();
     }
 }
