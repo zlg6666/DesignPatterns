@@ -1,6 +1,6 @@
 package IteratorsAndCommbinationPatterns.ComponentPattern;
 
-import IteratorsAndCommbinationPatterns.Iterator.Iterator;
+import java.util.Iterator;
 
 /**
  * @author: zlg
@@ -39,6 +39,10 @@ public abstract class MenuComponent {
     }
 
     public void print() {
+        throw new UnsupportedOperationException();
+    }
+
+    public Iterator createIterator() {
         throw new UnsupportedOperationException();
     }
 
